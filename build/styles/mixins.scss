@@ -1,0 +1,12 @@
+@mixin height-align($heightVal, $width: null) {
+  height: $heightVal;
+  line-height: $heightVal;
+  width: $width;
+}
+
+
+$browser-context: 14;
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em;
+}
+

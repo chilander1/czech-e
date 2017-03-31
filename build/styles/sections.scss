@@ -1,0 +1,138 @@
+.main-section {
+  background: linear-gradient(90deg, #0474bc 20%, #32b3ed 80%);
+  text-align: center;
+  padding: 150px 0;
+  .heading-block {
+    max-width: 75%;
+    margin: 0 auto;
+    h1 {
+      color: #fff;
+      font-weight: 100;
+      font-size: em(68);
+      line-height: 90px;
+      margin: 0 0 20px 0;
+      @media all and(max-width: 769px) {
+        font-size: em(40);
+        line-height: 40px;
+      }
+    }
+  }
+}
+
+.secondary-section {
+  text-align: center;
+  padding: 90px 0 0 0;
+  .section-title {
+    width: 475px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    margin-bottom: 60px;
+    h2 {
+      color: $h2-color;
+      font-weight: 100;
+      margin: 0;
+      display: inline-block;
+      padding: 0 45px;
+      background: #fff;
+      position: relative;
+      z-index: 3;
+      font-size: em(24);
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      height: 1px;
+      width: 100%;
+      background: $h2-color;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+    }
+    @media all and(max-width: 769px) {
+      width: 80%;
+    }
+
+  }
+  .boxes-block {
+    font-size: 14px;
+    .section-content-item {
+      text-align: left;
+      background: #dedede;
+      font-size: em(12);
+      line-height: 25px;
+      color: #000;
+      padding: 40px 20px;
+      border-radius: 7px;
+      flex: 0 0 330px;
+      @media all and(max-width: 1200px) {
+        flex: 0 0 30%;
+      }
+      @media all and(max-width: 769px) {
+        flex: 0 0 100%;
+        margin-bottom: 20px;
+      }
+    }
+
+  }
+  &.filter-section {
+    padding-bottom: 150px;
+    .filter-tabs {
+      margin-bottom: 60px;
+      a {
+        background: #fff;
+        color: #0474bc;
+        border-radius: 2px;
+        border: 1px solid #0474bc;
+        display: inline-block;
+        @include height-align(35px);
+        text-decoration: none;
+        font-weight: 500;
+        padding: 0 15px;
+        transition: 0.3s;
+        &:hover {
+          background: #0474bc;
+          color: #fff;
+        }
+        &.active {
+          background: #0474bc;
+          color: #fff;
+          &:hover {
+            background: darken(#0474bc, 5%);
+          }
+        }
+        &:not(:last-child) {
+          margin-right: 30px;
+        }
+      }
+    }
+    .filter-block {
+      position: relative;
+      overflow: hidden;
+      .filterTab {
+        transform: scale(0);
+        height: 0;
+        &.show-filter {
+          transform: scale(0);
+          animation: fade 0.3s forwards;
+          height: 100%;
+        }
+        @keyframes fade {
+          0% {
+            transform: scale(0);
+          }
+          100% {
+            transform: scale(1);
+          }
+        }
+      }
+      .section-content-item {
+        @media all and(max-width: 1020px){
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+
+}

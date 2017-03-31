@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+
+$main-section-bg: #0474bc;
+$footer-bg: #1a1a1a;
+$h2-color: #787878;
+$footer-height: 300px;
+
+html {
+  height: 100%;
+  body {
+    min-height: 100%;
+    font-size: 14px;
+    * {
+      font-family: 'Open Sans', sans-serif;
+      box-sizing: border-box;
+    }
+    @media all and(max-width: 1020px){
+      font-size: 10px;
+    }
+    img{
+      max-width: 100%;
+    }
+  }
+}
+
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+  &:after{
+    content: '';
+    display: table;
+    clear: both;
+  }
+
+  @media all and(max-width: 980px) {
+    width: 100%;
+  }
+
+  @media all and(min-width: 990px) {
+    width: 970px;
+  }
+  @media all and(min-width: 1200px) {
+    width: 1170px;
+  }
+}
+
+.flex-conteiner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  &.justify-around{
+    justify-content: space-around;
+  }
+  @media all and(max-width: 1020px){
+    justify-content: space-around;
+  }
+}
+.mg-top{
+  margin-top: 20px;
+}
+
+
+.wrapper{
+  min-height: calc(100vh - #{$footer-height});
+}
