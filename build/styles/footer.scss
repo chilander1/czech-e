@@ -89,8 +89,8 @@
           color: #0474bc;
 
           &:hover {
-            border-color: lighten(#0474bc, 5%);
-            color: lighten(#0474bc, 5%);
+            color: #fff;
+            background: #0474bc;
           }
         }
         &:not(:last-child) {
